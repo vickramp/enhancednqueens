@@ -156,8 +156,7 @@ public:
   }
   void find(){
     init();
-	if(etime<=time(0))
-		return;
+	if(etime<=time(0))return;
     this->energy=numConflicts(n);
     while(etime>=time(0)&&temp>freeze){
       if(this->energy==0){
@@ -174,8 +173,7 @@ public:
     std::uniform_int_distribution<int> distribution(0,size-1);
     for (int i=0;i<nliz;i++){
       again:
-	if(etime<=time(0))
-		return;
+	if(etime<=time(0))return;
       int x=distribution(generator);
       int y=distribution(generator);
       if(n->zoo[x][y]!='0'){
